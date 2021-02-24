@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/d3.js"></script>
+    <script src="js/barchat.js"></script>
+    <script src="js/piechart.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <h1>DHS - MULTIMARCAS / NOVOS E SEMI-NOVOS COM O PRECINHO QUE CABE NO SEU BOLSO</h1>
+    <div class="conteiner-menu">
+        <div class="menu-select">
+            <label for="">Marca</label>
+            <select id="filtro_marca">
+                <option value="...">...</option>
+                <option value="KIA">KIA</option>
+                <option value="HYUNDAI">HYUNDAI</option>
+            </select>
+        </div>
+        <div class="menu-select">
+            <label for="">Filial</label>
+            <select id="filtro_filial">
+                <option value="...">...</option>
+                <option value="BOTAFOGO">BOTAFOGO</option>
+                <option value="CENTRO">CENTRO</option>
+
+            </select>
+        </div>
+        <div class="menu-select">
+            <label for="">Ano</label>
+            <select id="filtro_ano">
+                <option value="...">...</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+            </select>
+        </div>
+        <div class="menu-select mes">
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_JAN" value="JAN">JAN</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_FEV" value="FEV">FEV</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_MAR" value="MAR">MAR</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_ABR" value="ABR">ABR</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_MAI" value="MAR">MAI</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_JUN" value="JUN">JUN</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_JUL" value="JUL">JUL</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_AGO" value="AGO">AGO</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_SET" value="SET">SET</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_OUT" value="OUT">OUT</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_NOV" value="NOV">NOV</input>
+            <input class="filtro_mes" type="checkbox" id="filtro_mes_DEZ" value="DEZ">DEZ</input>
+        </div>
+    </div>
+
+    <div class="container-dasboard">
+
+        <div class="container-marca">
+            <div class="conteiner">
+                <div class="title">
+                    <span>Modelo</span>
+                </div>
+                <div class="container-vis">
+                    <h1>Qtd vendida por modelo</h1>
+                    <svg id="qtd_modelo">
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Valor vendido por modelo R$</h1>
+                    <svg id="preco_modelo">
+
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Margem por modelo R$</h1>
+                    <svg id="margem_modelo">
+
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="conteiner">
+            <div class="conteiner">
+                <div class="title">
+                    <span>Marca</span>
+                </div>
+                <div class="container-vis">
+                    <h1>Participação por Marca</h1>
+                    <svg id="piechart_marca">
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Qtd vendida por Marca</h1>
+                    <svg id="qtd_marca">
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Valor vendido por Marca R$</h1>
+                    <svg id="preco_marca">
+
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Margem por Marca R$</h1>
+                    <svg id="margem_marca">
+
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class="conteiner">
+                <div class="title">
+                    <span>Estilo</span>
+                </div>
+                <div class="container-vis">
+                    <h1>Participação por Estilo</h1>
+                    <svg id="piechart_estilo">
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Qtd vendida por Estilo</h1>
+                    <svg id="qtd_estilo">
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Valor vendido por Estilo R$</h1>
+                    <svg id="preco_estilo">
+
+                    </svg>
+                </div>
+                <div class="container-vis">
+                    <h1>Margem por Estilo R$</h1>
+                    <svg id="margem_estilo">
+
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
